@@ -1,0 +1,284 @@
+/* Global Settings */
+body, p, h2, h3, h4 {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Popup Invitation */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.popup h1, .popup h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #333;
+}
+
+.popup button {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.popup button:hover {
+  background: #555;
+}
+
+/* Main Content */
+.hidden {
+  display: none;
+}
+
+/* Section Styling */
+section {
+  padding: 40px 5%;
+  text-align: center;
+}
+/* Intro Section (First Section) */
+.intro-section {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Untuk efek parallax saat scroll */
+  color: white;
+  height: 100vh; /* Tinggi 100% dari layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.fancy-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.date-text {
+  font-size: 1.5rem;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Countdown Section */
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.countdown-box {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Couple Section */
+.couple-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.couple-box {
+  width: 200px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.couple-info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+/* Event Section */
+.event-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.event-box {
+  width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.maps-link {
+  display: inline-block;
+  margin-top: 10px;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.maps-link:hover {
+  background: #555;
+}
+
+/* Gift Section */
+.gift-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gift-section h3 {
+  font-size: 1.5rem;
+}
+
+.gift-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.gift-item {
+  background: white;
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Music Control */
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.music-control img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.5s;
+}
+
+.music-control img.spin {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Comment Section */
+.comment-section {
+  padding: 40px 5%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .countdown-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .couple-section, .event-section, .gift-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .couple-box, .event-box, .gift-item {
+    width: 100%;
+  }
+
+  .countdown-box {
+    width: 80px;
+    height: 80px;
+  }
+}

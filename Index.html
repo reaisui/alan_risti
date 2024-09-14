@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Alan Fauzi & Risti Nurajizah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="scrollbar">
+
+    <!-- Popup Invitation -->
+    <div id="popup-invitation" class="popup">
+        <div class="popup-content">
+            <h1>Undangan Pernikahan</h1>
+            <h2>Alan Fauzi & Risti Nurajizah</h2>
+            <p>Anda diundang untuk hadir dalam acara pernikahan kami.</p>
+            <button id="open-invitation" onclick="openInvitation()">Buka Undangan</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <section class="intro-section">
+            <div class="content-wrapper">
+                <h1 class="fancy-text">Alan Fauzi & Risti Nurajizah</h1>
+                <p class="date-text">25 December 2024</p>
+            </div>
+        </section>
+
+        <!-- Ayat Suci Section -->
+        <section class="quote-section">
+            <h2 class="section-title">Ayat Suci Al-Qur'an</h2>
+            <p>“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.” (QS. Ar-Rum: 21)</p>
+        </section>
+
+        <!-- Countdown Timer Section -->
+        <section class="countdown-section">
+            <h2 class="section-title">Hitung Mundur</h2>
+            <div class="countdown-wrapper">
+                <div class="countdown-box"><span id="days">0</span> Hari</div>
+                <div class="countdown-box"><span id="hours">0</span> Jam</div>
+                <div class="countdown-box"><span id="minutes">0</span> Menit</div>
+                <div class="countdown-box"><span id="seconds">0</span> Detik</div>
+            </div>
+        </section>
+
+      
+
+        <!-- Bride and Groom Section -->
+        <section class="couple-section">
+            <h2 class="section-title">Mempelai</h2>
+            <div class="couple-box">
+                <div class="couple-info">
+                    <img src="images.jpg" alt="Alan Fauzi">
+                    <h3>Alan Fauzi</h3>
+                    <a href="https://instagram.com" class="social-icon">
+                        <img src="ig.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="couple-box">
+                <div class="couple-info">
+                    <img src="img1.jpg"Risti Nurajizah">
+                    <h3>Risti Nurajizah</h3>
+                    <a href="https://instagram.com" class="social-icon">
+                        <img src="ig.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Section -->
+        <section class="event-section">
+            <h2 class="section-title">Jadwal Acara</h2>
+            <div class="event-box">
+                <h4>Akad Nikah</h4>
+                <p>25 December 2024, 10:00 AM</p>
+                <p>Lokasi: Masjid Agung</p>
+                <a href="https://maps.google.com" class="maps-link">Google Maps</a>
+            </div>
+            <div class="event-box">
+                <h4>Resepsi</h4>
+                <p>25 December 2024, 12:00 PM</p>
+                <p>Lokasi: Gedung Serbaguna</p>
+                <a href="https://maps.google.com" class="maps-link">Google Maps</a>
+            </div>
+        </section>
+  <!-- Gift Section -->
+  <section class="gift-section">
+    <h2 class="section-title">Hadiah Pernikahan</h2>
+    <div class="gift-box-wrapper">
+        <div class="gift-box">
+            <h4>Rekening Bank</h4>
+            <p>Bank BCA - 123456789</p>
+        </div>
+        <div class="gift-box">
+            <h4>E-Wallet</h4>
+            <p>OVO/DANA - 08123456789</p>
+        </div>
+    </div>
+</section>
+        <!-- Comment Section -->
+        <section class="comment-section">
+            <h2 class="section-title">Komentar</h2>
+            <div id="disqus_thread"></div>
+        </section>
+
+        <!-- Music Controls -->
+        <div id="music-control" class="music-control">
+            <img src="vinyl.png" alt="CD Icon" id="music-icon">
+        </div>
+    </div>
+
+    <audio id="wedding-music" src="music.mp3" loop></audio>
+
+    <script src="script.js"></script>
+    <script>
+        var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://yourdisqusshortname.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+</body>
+</html>
